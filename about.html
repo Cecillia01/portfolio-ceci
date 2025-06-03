@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me</title>
+  <link rel="stylesheet" href="aboutStyle.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo">✻ Ceci</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="work.html">Projects</a>
+    <a href="index.html#contact" class="contact-link">CONTACT ME</a>
+  </nav>
+</header>
+
+<!-- About Section -->
+<section id="about" class="fade-in about-section">
+  <!-- Floating Images on sides -->
+  <img src="progden.jpg" alt="Left float" class="float-image left" />
+  <img src="progden2.png" alt="Right float" class="float-image right" />
+
+  <h2>About Me</h2>
+  <p>
+  Hi! I'm <strong>Ceci</strong>, or as most people call me, <strong>"Cess"</strong>. I'm a <em>21-year-old</em> student from <strong>Tarlac State University</strong>, who pursued a Bachelor of Science in Information Technology and majored in <strong>Web and Mobile Application</strong>.  
+  During my first years in college, I wasn’t sure what to do in life, but when I joined our department’s organization, <strong>Programmers’ Den</strong>, I developed a strong interest in <span class="highlight">UI/UX</span> and <span class="highlight">Graphic Design</span>.  
+</p>
+<p>
+  During my active years there, I had the chance to hone my skills and learn from my senior members. In terms of web development, I have practiced a lot since my first year, and now I aspire to be a <strong>frontend web developer</strong>. I hope to work in this role as soon as I improve my skills.
+  *fingers crossed*.
+</p>
+
+  <div class="about-animated-icons">
+    <div class="icon">💻</div>
+    <div class="icon">📱</div>
+    <div class="icon">⌨️</div>
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="fade-in timeline">
+  <h2>Experience</h2>
+  <div class="timeline-container">
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <button class="accordion-button">
+        <strong>Former Social Media/ Graphic Design Intern at Wireless Access for Health (2025)</strong>
+        <i class="fa-solid fa-caret-up accordion-icon"></i>
+      </button>
+      <div class="accordion-content preview">
+        <ul>
+          <li>Created publication materials and graphics for the company's social media posts to maintain a consistent online presence.</li>
+          <li>Designed the event tarpaulin used during an awarding ceremony, following the company's branding guidelines.</li>
+          <li>Created designs for the plaques used in a recent recognition event</li>
+          <li>Edited instructional videos for the company's system’s user manual to guide users through key features and functions.</li>
+        </ul>
+      </div>
+    </div>
+
+   <div class="timeline-item">
+  <div class="timeline-dot"></div>
+  <button class="accordion-button">
+    <strong>
+      Former Vice President of Multimedia at Programmers' Den (2021 to 2022) / Member (2021 - Present)
+    </strong>
+    <i class="fa-solid fa-caret-up accordion-icon"></i> <!-- Font Awesome caret -->
+  </button>
+  <div class="accordion-content preview">
+    <ul>
+      <li>Created publication materials</li>
+      <li>Lead the Multimedia Team during university's events</li>
+      <li>Participated in their tutorial sessions where I was able to practice creating graphic designs and animation, as well as UI Design</li>
+      <li>Joined their Animation Contest in 2021 and won 1st place</li>
+    </ul>
+  </div>
+</div>
+
+
+  </div>
+</section>
+
+<!-- Certifications Section -->
+<section id="certifications" class="fade-in certifications-section">
+  <h2>Certifications and Badges</h2>
+  <div class="cert-grid">
+    <a href="https://www.credly.com/badges/a386f62a-fd25-447b-9c5c-9a65ecb91bf1/public_url" target="_blank">
+      <img src="css-essentials.png" alt="CSS Essentials" />
+    </a>
+    <a href="https://www.credly.com/badges/f30aa7db-7467-4d57-b3c3-3dac59666ecc/public_url" target="_blank">
+      <img src="html-essentials.png" alt="HTML Essentials" />
+    </a>
+    <a href="https://www.credly.com/badges/8d353ca0-3b3d-4a66-ad1b-db1c90df04c0/public_url" target="_blank">
+      <img src="javascript-essentials-1.png" alt="JavaScript Essentials" />
+    </a>
+    <a href="https://www.credly.com/badges/045d8834-649c-4e81-a52e-9105d1bb8a20/public_url" target="_blank">
+      <img src="python-essentials-1.1.png" alt="Python Essentials" />
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 Ceci  |  Get in touch with me!</p>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/chuwiyong" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.linkedin.com/in/maria-cecillia-botio-507954278/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=botio.mariacecillia@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".accordion-button");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      const content = button.nextElementSibling;
+
+      // Toggle accordion content
+      content.classList.toggle("open");
+      button.classList.toggle("active");
+
+      // Toggle icon direction
+      const icon = button.querySelector(".accordion-icon");
+      if (icon) {
+        if (button.classList.contains("active")) {
+          icon.classList.remove("fa-caret-up");
+          icon.classList.add("fa-caret-down");
+        } else {
+          icon.classList.remove("fa-caret-down");
+          icon.classList.add("fa-caret-up");
+        }
+      }
+    });
+  });
+
+  // Fade in on scroll
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+  fadeEls.forEach(el => obs.observe(el));
+
+  // Fullscreen image viewer
+  const images = document.querySelectorAll('.clickable-img');
+  const fullView = document.getElementById('fullscreen-view');
+  const fullImg = document.getElementById('fullscreen-img');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      fullImg.src = img.src;
+      fullView.classList.remove('hidden');
+    });
+  });
+
+  fullView.addEventListener('click', () => {
+    fullView.classList.add('hidden');
+  });
+});
+</script>
+
+
+
+</body>
+</html>

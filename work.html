@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CECI</title>
+  <link rel="stylesheet" href="workStyle.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">✻ Ceci</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a> 
+      <a href="work.html" class="active">Projects</a>
+      <a href="contact.html" class="contact-link">CONTACT ME</a>
+    </nav>
+  </header>
+
+  <main class="fade-in">
+    <section id="ui" class="fade-in work-section">
+      <h2>UI Design</h2>
+
+      <div class="ui-work-item">
+        <img src="1.jpg" alt="Melodia (Music Player App)" class="ui-img clickable-img" />
+        <div class="ui-description">
+          <h3>Melodia (Music Player App)</h3>
+          <p>The app uses colors that match the vibe of music, creating an engaging and dynamic experience. 
+            The design makes it easy and enjoyable to listen to and manage your music.</p>
+          <a href="https://www.figma.com/design/TzT7SbwxFF1HlCCqPwtTod/Prototype--Melodia-?node-id=0-1&t=Hla5Jdr8OeyrcCPL-1" target="_blank" class="figma-link">View on Figma</a>
+        </div>
+      </div>
+
+      <div class="ui-work-item">
+        <img src="2.jpg" alt="Personal Portfolio" class="ui-img clickable-img" />
+        <div class="ui-description">
+          <h3>Personal Portfolio</h3>
+          <p>This website highlights my skills, projects, and experience clearly and professionally. 
+            It uses my favorite colors, pink and violet, to create a vibrant and welcoming look that makes it 
+            easy for visitors to learn about me and connect.</p>
+          <a href="https://www.figma.com/design/zbU5v6Eq8WQlBcKR3qe5hL/Untitled?node-id=0-1&t=DYxSiyhqX1VqHzR9-1" target="_blank" class="figma-link">View on Figma</a>
+        </div>
+      </div>
+
+      <div class="ui-work-item">
+        <img src="3.jpg" alt="Laundry Helper" class="ui-img clickable-img" />
+        <div class="ui-description">
+          <h3>Laundry Helper</h3>
+          <p>Laundry Helper’s interface combines soothing aqua and crisp white colors for a fresh, clean look. 
+            This simple color scheme makes the app easy and pleasant to use for both laundry owners and customers.</p>
+          <a href="https://www.figma.com/design/NQsBt32AHXkTTKJJ0GuATq/Untitled?node-id=0-1&t=mnnszSq48XEkhY1A-1" target="_blank" class="figma-link">View on Figma</a>
+        </div>
+      </div>
+
+      <p class="coming-soon">More projects to be posted soon!</p>
+    </section>
+
+    <section id="graphic" class="fade-in work-section">
+      <h2>Graphic Design</h2>
+      <div class="work-grid">
+        <img src="INFOGRAPHICS.jpg" alt="Sample Design 1" class="work-card clickable-img" />
+        <img src="Picture4.png" alt="Sample Design 2" class="work-card clickable-img" />
+        <img src="Picture5.png" alt="Sample Design 3" class="work-card clickable-img" />
+        <img src="pd4.jpg" alt="Sample Design 4" class="work-card clickable-img" />
+        <img src="pd3.jpg" alt="Sample Design 5" class="work-card clickable-img" />
+      </div>
+    </section>
+
+    <section id="tshirt" class="fade-in work-section">
+      <h2>Tshirt Design</h2>
+      <div class="work-grid">
+        <img src="288081721_441459017911476_7093709546983811753_n.jpg" alt="Organization's Sample Merchandise" class="work-card clickable-img" />
+        <img src="323955234_730690771758589_3083965365253756683_n.jpg" alt="Organization's Sample Merchandise" class="work-card clickable-img" />
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="imgModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage" alt="Fullscreen Preview" />
+    <div id="caption"></div>
+  </div>
+
+  <footer>
+    <p>© 2025 Ceci  |  Get in touch with me!</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/chuwiyong" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.linkedin.com/in/maria-cecillia-botio-507954278/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=botio.mariacecillia@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImage");
+    const captionText = document.getElementById("caption");
+    const closeBtn = document.querySelector(".modal .close");
+
+    // Only images with class clickable-img open modal (including UI images and others)
+    document.querySelectorAll('.clickable-img').forEach(img => {
+      img.addEventListener('click', () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        captionText.textContent = img.alt;
+      });
+    });
+
+    closeBtn.onclick = () => {
+      modal.style.display = "none";
+    };
+
+    modal.onclick = (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+</body>
+</html>

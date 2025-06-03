@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;500;700&display=swap');
+
+/* Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #3a2e5f;
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f8f8ff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #7d5fff;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #3a2e5f;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #7d5fff;
+}
+
+.contact-link {
+  font-weight: 700;
+  color: #7d5fff;
+}
+
+/* Section Headings */
+section h2 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #3a2e5f;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Spacing */
+.work-section {
+  margin-bottom: 5rem;
+}
+
+/* --- UI Design Section --- */
+.ui-work-item {
+  display: flex;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto 2rem auto;
+  gap: 1.5rem;
+}
+
+.ui-img {
+  width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(125, 95, 255, 0.15);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.ui-img:hover {
+  box-shadow: 0 8px 25px rgba(125, 95, 255, 0.4);
+  transform: translateY(-5px);
+}
+
+.ui-description {
+  max-width: 600px;
+  color: #3a2e5f;
+}
+
+.ui-description h3 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+}
+
+.ui-description p {
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.figma-link {
+  font-weight: 600;
+  color: #7d5fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.figma-link:hover {
+  color: #3a2e5f;
+  text-decoration: underline;
+}
+
+/* "More projects" text */
+.coming-soon {
+  font-style: italic;
+  text-align: center;
+  margin-top: 2rem;
+  color: #555;
+}
+
+/* Grid for Graphic and Tshirt Designs */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  padding: 0 1rem;
+}
+
+/* Work Card */
+.work-card {
+  background: #f8f8ff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(125, 95, 255, 0.15);
+  padding: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  color: #3a2e5f;
+  text-decoration: none;
+  transition: 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  border: 2px solid transparent;
+}
+#graphic .work-card {
+  max-width: 300px; 
+  max-height: 250px;
+  margin: 0 auto;   /* center the images inside their grid cells */
+  padding: 1rem;    /* optionally reduce padding if needed */
+}
+
+.work-card:hover {
+  box-shadow: 0 8px 25px rgba(125, 95, 255, 0.4);
+  border-color: #7d5fff;
+  color: #7d5fff;
+}
+
+.work-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+#tshirt .work-card {
+  max-width: 300px; /* smaller width to reduce the overall image size */
+  margin: 0 auto;   /* center the images inside their grid cells */
+  padding: 1rem;    /* optionally reduce padding if needed */
+}
+
+#tshirt .work-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+/* Fade-in animation */
+.fade-in {
+  animation: fadeIn 0.8s ease-in forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.85);
+  transition: opacity 0.3s ease;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(125, 95, 255, 0.7);
+}
+
+#caption {
+  margin: 15px auto;
+  text-align: center;
+  color: #ccc;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.close {
+  position: fixed;
+  top: 30px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.close:hover {
+  color: #7d5fff;
+}
+
+/* Footer */
+footer {
+  background-color: #f8f8ff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+  color: #7d5fff;
+  font-weight: 600;
+}
+
+.social-icons {
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  color: #7d5fff;
+  margin: 0 0.5rem;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #3a2e5f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .ui-work-item {
+    flex-direction: column;
+    max-width: 90vw;
+  }
+
+  .ui-img {
+    width: 90vw;
+  }
+}
